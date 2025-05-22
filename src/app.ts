@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import { testConnection } from './config/db-config';
+import { testConnection } from './config/db-config.ts';
 import librosRoutes from './routes/libros-routes';
 
 // Tipos para el manejo de errores
