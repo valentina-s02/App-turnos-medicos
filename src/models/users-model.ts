@@ -7,7 +7,7 @@ export enum TipoUsuario {
   PACIENTE = 'paciente'
 }
 
-// Interfaz para los atributos del usuario
+// Interfaz para los atributos del usuario, según la base de datos
 export interface UserAttributes {
   user_id: number;
   first_name: string;
@@ -23,7 +23,7 @@ export interface UserAttributes {
 // Interfaz para la creación de usuario (omitiendo campos opcionales o autogenerados)
 export interface UserCreationAttributes extends Optional<UserAttributes, 'user_id' | 'created_at' | 'last_update'> {}
 
-// Clase del modelo User
+// Clase del modelo User para TypeScript
 class User extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {
   public user_id!: number;
   public first_name!: string;
